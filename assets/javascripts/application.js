@@ -1,1 +1,3 @@
-console.log('webpack rulit 1')
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('document ready')
+})
