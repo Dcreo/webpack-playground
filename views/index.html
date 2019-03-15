@@ -2,11 +2,26 @@
 {% import "commons/pagination.html" as pagination %}
 
 {% block content %}
-  <h1>Индексная страница</h1>
+  <div class='col {{ '-8' if relatedNews.length }}'>
+    <h1>Индексная страница</h1>
 
-  {% for user in users %}
-    {{ user.name }}
-  {% endfor %}
+    {% for user in users %}
+      {{ user.name }}
+    {% endfor %}
 
-  {{ pagination.init("reload") }}
+    {{ pagination.init("reload") }}
+  </div>
+{% endblock %}
+
+{% block rightSide %}
+  {% if relatedNews.length %}
+    <div class='col-4'>
+      <strong>{{ time }}</strong>
+      <ul>
+        {% for news in relatedNews %}
+          <li>{{ news.title }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
 {% endblock %}

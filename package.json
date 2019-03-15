@@ -9,9 +9,11 @@
     "express": "^4.16.4",
     "file-loader": "^3.0.1",
     "jquery": "^3.3.1",
+    "moment": "^2.24.0",
     "node-sass": "^4.11.0",
     "nunjucks": "^3.2.0",
     "popper.js": "^1.14.7",
+    "shelljs": "^0.8.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   },
