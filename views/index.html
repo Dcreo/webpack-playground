@@ -1,6 +1,10 @@
 {% extends "layouts/application.html" %}
 {% import "commons/pagination.html" as pagination %}
 
+{% block pageTitle %}
+  Тестовая страница с двумя колонками
+{% endblock %}
+
 {% block content %}
   <div class='col {{ '-8' if relatedNews.length }}'>
     <h1>Индексная страница</h1>
@@ -20,7 +24,7 @@
       <strong>{{ time }}</strong>
       <ul>
         {% for news in relatedNews %}
-          <li>{{ news.title }}</li>
+          <li><a href="#">{{ news.title }}</a></li>
         {% endfor %}
       </ul>
     </div>
