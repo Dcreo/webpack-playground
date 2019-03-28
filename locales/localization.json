@@ -1,0 +1,9 @@
+{
+  "en": {
+    "appName": "Test app"
+  },
+  "fr": {
+    "appName": "ourAppFrance",
+    "paginationTitle": "A pagination france"
+  }
+}

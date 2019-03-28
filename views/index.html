@@ -7,13 +7,13 @@
 
 {% block content %}
   <div class='col {{ '-8' if relatedNews.length }}'>
-    <h1>Индексная страница</h1>
+    <h1>{{ l.appName }}</h1>
 
     {% for user in users %}
       {{ user.name }}
     {% endfor %}
 
-    {{ pagination.init("reload") }}
+    {{ pagination.init("reload", l) }}
   </div>
 {% endblock %}
 

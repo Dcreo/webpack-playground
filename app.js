@@ -3,6 +3,7 @@ const app = express()
 const nunjucks = require('nunjucks')
 const path = require('path');
 const moment = require('moment')
+const localization = require('./locales/localization')
 
 app.use(express.static('public'))
 
@@ -13,7 +14,10 @@ nunjucks.configure('views', {
 
 app.set('view engine', 'html')
 
-app.get('/', (req, res) => {
+app.get('/:locale?/test', (req, res) => {
+  let locale = req.params.locale || 'en'
+  res.locals.l = localization[locale]
+
   let relatedNews = [{
     title: 'News one',
     description: 'Olalala'
